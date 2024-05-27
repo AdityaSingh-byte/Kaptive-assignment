@@ -2,7 +2,7 @@ import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "../styles/sidebar.css";
-
+import { IoExitOutline } from "react-icons/io5";
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -61,7 +61,7 @@ const Sidebar = () => {
             </a>
           </li>
         </ul>
-        <hr />
+        <hr style={{color:'black'}}/>
         <div className="d-flex align-items-center text-white">
           <div
             className="me-2"
@@ -76,7 +76,7 @@ const Sidebar = () => {
             }}
           >
             <img
-              src="../assets/IMG_0647.JPG"
+              src="../../public/IMG_0647.jpg"
               alt="User"
               width="32"
               height="32"
@@ -88,7 +88,9 @@ const Sidebar = () => {
             
           </div>
         </div>
-        <button className="btn btn-outline-light mt-3">Logout</button>
+        <button className="btn btn-outline-dark mt-3 logout-button">
+          <IoExitOutline className="logout-icon" /> Logout
+        </button>
       </div>
       <div className="hamburger-icon" onClick={toggleSidebar}>
         {isOpen ? <FaTimes size={30} /> : <FaBars size={30} />}

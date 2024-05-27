@@ -1,14 +1,29 @@
 .sidebar-container {
   height: 100vh;
   position: relative;
+  color: #000;
+
 }
 
 .sidebar {
   width: 280px;
   height: 100%;
+  position: relative;
+  background-image: url("../../public/croped.jpg");
+  background-size: cover; 
+  background-position: center;
   transition: transform 0.3s ease;
-  background-color: #686bf6 !important;
+  color: black;
 }
+.sidebar-container .sidebar {
+  z-index: 2; 
+}
+
+.sidebar a, .sidebar p {
+  color: black !important;
+}
+
+
 
 .hamburger-icon {
   display: none;

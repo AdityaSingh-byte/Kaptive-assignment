@@ -1,5 +1,6 @@
 /* src/components/NavBar.css */
 .navbar {
+  background-image: url("../../public/croped.jpg");
   display: flex;
   justify-content: space-between;
   align-items: center;
