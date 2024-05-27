@@ -1,7 +1,7 @@
-import  { useState } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { FaBars, FaTimes } from 'react-icons/fa';
-import './Sidebar.css'; // Import the CSS file
+import { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { FaBars, FaTimes } from "react-icons/fa";
+import "../styles/sidebar.css";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,12 +12,19 @@ const Sidebar = () => {
 
   return (
     <div className="sidebar-container">
-      <div className={`sidebar d-flex flex-column flex-shrink-0 p-3 text-bg-dark ${isOpen ? 'open' : 'closed'}`}>
-        <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+      <div
+        className={`sidebar d-flex flex-column flex-shrink-0 p-3 text-bg-dark ${
+          isOpen ? "open" : "closed"
+        }`}
+      >
+        <a
+          href="/"
+          className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
+        >
           <svg className="bi pe-none me-2" width="40" height="32">
             <use xlinkHref="#bootstrap"></use>
           </svg>
-          <span className="fs-4">PLSE</span>
+          <h1 className="fw-bolder">PLSE</h1>
         </a>
 
         <ul className="nav nav-pills flex-column mb-auto">
@@ -56,12 +63,29 @@ const Sidebar = () => {
         </ul>
         <hr />
         <div className="d-flex align-items-center text-white">
-          <div className="me-2" style={{ background: 'white', borderRadius: '50%', width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <img src="https://github.com/mdo.png" alt="User" width="32" height="32" className="rounded-circle" />
+          <div
+            className="me-2"
+            style={{
+              background: "white",
+              borderRadius: "50%",
+              width: "40px",
+              height: "40px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <img
+              src="../assets/IMG_0647.JPG"
+              alt="User"
+              width="32"
+              height="32"
+              className="rounded-circle"
+            />
           </div>
           <div>
             <p className="mb-0">Aditya Singh</p>
-            <small>user</small>
+            
           </div>
         </div>
         <button className="btn btn-outline-light mt-3">Logout</button>

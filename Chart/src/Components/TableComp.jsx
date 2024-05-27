@@ -1,9 +1,9 @@
-
-
 import data from "../data/Case Study _ Front End (Json).json";
 import ReactPaginate from "react-paginate";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
+import "../styles/table.css";
+import ToggleButtonGroup from "./ButtonGroup";
 
 const formatNumber = (num) => Math.floor(num);
 
@@ -20,7 +20,10 @@ const TableComp = () => {
   const pageCount = Math.ceil(data.Sheet1.length / itemsPerPage);
   return (
     <>
-      <h3>Cashflow Summary - 1</h3>
+      <div className="d-flex justify-content-between mb-3">
+        <h3>Cashflow Summary - 1</h3>
+        <ToggleButtonGroup />
+      </div>
       <div className="table-responsive">
         <table className="table table-striped">
           <thead className="table-primary">
@@ -86,27 +89,29 @@ const TableComp = () => {
           </tbody>
         </table>
       </div>
-      <ReactPaginate
-        previousLabel={"previous"}
-        nextLabel={"next"}
-        breakLabel={"..."}
-        breakClassName={"break-me"}
-        pageCount={pageCount}
-        marginPagesDisplayed={2}
-        pageRangeDisplayed={5}
-        onPageChange={handlePageClick}
-        containerClassName={"pagination"}
-        subContainerClassName={"pages pagination"}
-        activeClassName={"active"}
-        pageClassName={"page-item"}
-        pageLinkClassName={"page-link"}
-        previousClassName={"page-item"}
-        previousLinkClassName={"page-link"}
-        nextClassName={"page-item"}
-        nextLinkClassName={"page-link"}
-        breakLinkClassName={"page-link"}
-        disabledClassName={"disabled"}
-      />
+      <div className="mt-3 d-flex justify-content-end flex-wrap j">
+        <ReactPaginate
+          previousLabel={"previous"}
+          nextLabel={"next"}
+          breakLabel={"..."}
+          breakClassName={"break-me"}
+          pageCount={pageCount}
+          marginPagesDisplayed={1}
+          pageRangeDisplayed={1}
+          onPageChange={handlePageClick}
+          containerClassName={"pagination"}
+          subContainerClassName={"pages pagination"}
+          activeClassName={"active"}
+          pageClassName={"page-item"}
+          pageLinkClassName={"page-link"}
+          previousClassName={"page-item"}
+          previousLinkClassName={"page-link"}
+          nextClassName={"page-item"}
+          nextLinkClassName={"page-link"}
+          breakLinkClassName={"page-link"}
+          disabledClassName={"disabled"}
+        />
+      </div>
     </>
   );
 };

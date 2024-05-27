@@ -1,6 +1,4 @@
-
-
-import './NavBar.css';
+import "../styles/navbar.css";
 
 const NavBar = () => {
   return (
@@ -15,8 +13,8 @@ const NavBar = () => {
       <div className="right-nav">
         <button className="nav-button">Normal View</button>
         <button className="nav-button">Growth View</button>
-        <input type="text" className="nav-input" placeholder="Period From" />
-        <input type="text" className="nav-input" placeholder="Period To" />
+        <input type="date" className="nav-input" placeholder="Period From" />
+        <input type="date" className="nav-input" placeholder="Period To" />
       </div>
     </div>
   );

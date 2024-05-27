@@ -1,27 +1,51 @@
-import { Bar } from 'react-chartjs-2';
-import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
-import './Chart.css'; 
+import "../styles/chart.css";
+import { Bar } from "react-chartjs-2";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
 
-ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
 const Chart = () => {
   const data = {
-    labels: ['2015-16', '2016-17', '2017-18', '2018-19', '2019-20', '2020-21', '2021-22', '2022-23'],
+    labels: [
+      "2015-16",
+      "2016-17",
+      "2017-18",
+      "2018-19",
+      "2019-20",
+      "2020-21",
+      "2021-22",
+      "2022-23",
+    ],
     datasets: [
       {
-        label: 'Revenue',
-        data: [200, 160, 150, 117, 200, 160, 90, 97],
-        backgroundColor: 'rgba(153, 102, 255, 0.6)',
+        label: "Revenue",
+        data: [100, 260, 120, 37, 100, 10, 190, 95],
+        backgroundColor: "rgba(153, 102, 255, 0.6)",
       },
       {
-        label: 'COGS',
-        data: [50, 300, 180, 100, 200, 400, 150, 117],
-        backgroundColor: 'rgba(54, 162, 235, 0.6)',
+        label: "COGS",
+        data: [150, 200, 280, 150, 150, 180, 120, 90],
+        backgroundColor: "rgba(54, 162, 235, 0.6)",
       },
       {
-        label: 'Gross Profit',
-        data: [100, 120, 90, 100, 100, 120, 100, 100],
-        backgroundColor: 'rgba(255, 159, 64, 0.6)',
+        label: "Gross Profit",
+        data: [120, 150, 90, 10, 30, 160, 60, 70],
+        backgroundColor: "rgba(255, 159, 64, 0.6)",
       },
     ],
   };
@@ -30,16 +54,16 @@ const Chart = () => {
     responsive: true,
     plugins: {
       legend: {
-        position: 'top',
+        position: "top",
       },
       title: {
         display: true,
-        text: 'Company Financial Data',
+        text: "Company Financial Data",
       },
     },
     animation: {
       duration: 1000,
-      easing: 'easeOut',
+      easing: "easeOut",
     },
   };
 

@@ -1,6 +1,5 @@
-/* src/App.css */
-
 .app-container {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   display: flex;
   height: 100vh;
   overflow: hidden;
@@ -17,6 +16,7 @@
 }
 
 .main-content {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -29,7 +29,7 @@
 }
 
 .chart-section {
-  flex: 1;
+  
   display: flex;
   align-items: center;
   justify-content: center;
